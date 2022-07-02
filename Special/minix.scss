@@ -1,0 +1,41 @@
+@mixin media($words) {
+    @if $words == mopile {
+        @media (max-width:767px) {
+            @content
+        }
+    }
+    @else if $words == small {
+        @media (min-width:767px) and (max-width:991px) {
+            @content
+        }
+    }
+    @else if $words == small2 {
+        @media (max-width:450px) {
+            @content
+        }
+    }
+    @else if $words == small3 {
+        @media (min-width:350px) {
+            @content
+        }
+    }
+    @else if $words == medium {
+        @media (min-width:992px) and (max-width:1199px ) {
+            @content 
+        }
+    }
+    @else if $words == large {
+        @media (min-width:1200px) {
+            @content
+        }
+    }
+    
+}
+
+@mixin animition($name-a) {
+    @keyframes animition-#{$name-a} {
+        @content;
+        
+    }
+    
+}

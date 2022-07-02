@@ -1,0 +1,1703 @@
+$mian-color:#ffb400;
+$secound-color:#eee;
+$third-color:#5c5b5b;
+$mian-transition:1s;
+
+@use "minix.scss" as *;
+
+body{
+    // @include media(medium){
+    //         overflow: hidden;
+    // }
+    // @include media(large){
+    //         overflow: hidden;
+    // }
+    @include media(small2){
+        height: 900px;
+    }
+
+// one face 
+        .nav{
+            top: 24%;
+            right: 10px;
+            z-index: 222;
+
+            .nav1{ 
+                @include media(mopile){
+                        display: none;
+                    }
+                height: 60px;
+                svg{
+                    z-index: 1222;
+                    right: 2px;
+                    padding: 13px !important;
+                    background-color:#eee;
+                    top: -10px;
+                    color: gray !important   ;
+                    width: 20px;
+                    height: 17px;
+
+                    &:hover{
+                        background-color: $mian-color;
+                        color: white !important;
+                    }
+                    &:hover + a {
+                                opacity: 1;
+                                transition: 1s;
+                                padding: 12px 80px 12px 12px !important;
+
+                            }
+
+                }
+                a{
+                    opacity: 0;
+                    transition: $mian-transition;
+                    z-index: -1;
+                    position: absolute;
+                    top: -12px;
+                    right: 2px;
+                    background-color: $mian-color;
+                    color: white;
+                    padding: 12px 50px 12px 12px !important;
+
+                    @include media(mopile){
+                        display: none;
+                    }
+     
+
+                }
+            }
+
+        }
+        
+
+        .nav2{
+            padding: 0px !important;
+            bottom: 55px;
+            z-index: 2222;
+            margin-left: -30px;
+            width: 100%;
+            justify-content: space-around;
+            background-color: transparent;
+            @include media(small2){
+                justify-content: space-between;
+                padding:40px !important;
+            }
+
+            svg{  
+                background-color: #eee;
+                color: $third-color;
+                padding: 20px !important;
+
+
+                         &:hover {
+                        color: white !important;
+                        background-color: $mian-color;
+                        }
+                        
+                
+
+
+            
+            }
+
+        }
+
+    a{
+        text-decoration: none;
+        background-color: $mian-color;
+        color: white;
+        padding: 12px 65px 12px 12px !important;
+
+
+        
+    }
+
+    .home{
+        
+        .card-aa{
+            @include media(small){
+                display: none;
+            }
+            @include media(mopile){
+                display: none;
+            }
+            .close2{
+                top: 15px;
+                right: 15px;
+                padding: 10px;
+                border: 2px solid white;
+                color: $third-color;
+                cursor: pointer;
+            
+            }
+            .about{
+                opacity: 1 !important;
+            }
+            opacity: 0;
+            left: 22%;
+            height: 600px;
+            width: 700px;
+            position: absolute;
+            z-index: 222;
+            background-color: #eee;
+            padding: 10px;
+            top: 7%;
+            overflow-y: auto;
+            border-radius: 10px;
+
+            .m-card{
+                width: 20% !important; 
+
+            }
+            .p-about{
+                font-size: 50px;
+            }
+        }
+        .container{
+            
+    margin-top: 40px;
+
+            @include media (mopile){
+                justify-content: center;
+            }
+        }
+        height: 100%;
+        overflow: hidden;
+
+        img{
+
+            height: calc(100vh - 140px);
+            width: 438px;
+            border-radius: 64px;
+            box-shadow: 8px -5px 8px -4px var(--bs-secondary);
+        @include media(small){
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+        }
+        @include media(mopile){
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+        }
+        .card-r{
+            @include media(large){
+                text-align: left;
+            }
+            @include media(medium){
+                text-align: left;
+            }
+            @include media(mopile){
+                text-align: center;
+            }
+            h2{
+                span:nth-child(1){
+                        color: $mian-color;
+                }
+
+                span:nth-child(3){
+                        color:rgb(68, 68, 68);
+                }
+
+
+            }
+            .more{
+                bottom: 200px;
+                @include media(small){
+                    bottom: -125px;
+                }
+                @include media(mopile){
+                   display: none !important;
+
+                }
+                
+                @include media(small2){
+display: none
+;                }
+                
+
+                &:hover{
+                   .a-more{
+                    color: white !important;
+                   }
+                    &::after{
+                        content: "";
+                        width: 90%;
+
+                    }
+                }
+
+                &::after{
+                    content: "";
+                    width: 0%;
+                    transition: $mian-transition;
+                    height: 191%;
+                    z-index: -1;
+                    right: 20px;
+                    top: -11px;
+                    border-radius: 20px;
+                    background: $mian-color;
+                    position: absolute;
+
+                                }
+
+
+                svg{
+                    background-color: $mian-color;
+                    padding: 15px;
+                    position: absolute;
+                    top: -11px;
+                    color: white !important;
+                    border-radius: 0px 24px 24px 0;
+                    right: 0px;
+                    cursor: pointer;
+                }
+            }
+            .a-more{
+              border: 2px solid $mian-color;
+              color: $third-color;
+              background-color: transparent;
+              &:hover{
+                color: white;
+              }
+            }
+        }
+
+    } 
+        .bg{
+            width: 300px;
+            top: -20px;
+            left: -46px;
+            transform: rotateZ(-11deg);
+            height: 140%;
+            position: absolute;
+            z-index: -1;
+            background-color: $mian-color;
+
+            @include media(small){
+                display: none;
+            }
+            @include media(mopile){
+                display: none;
+            }
+
+        }
+
+        // end first face 
+
+        .about{
+            opacity: 0;
+            .container:nth-child(1){
+                padding: 10px;
+                @include media(small3){
+                    justify-content: center;
+                }
+
+            }
+            .container:nth-child(2){
+                padding: 10px;
+                @include media(small3){
+                    justify-content: center;
+                }
+
+            }
+            .container:nth-child(3){
+                padding: 10px;
+                @include media(small3){
+                    justify-content: center;
+                }
+
+            }
+            .info{
+                padding: 40px 0 0 ;
+                @include media(small) {
+
+
+                }
+                
+            }
+            .h-about{
+                font-size: 125px;
+                color: rgba(0, 0, 0, 0.1098039216);
+                line-height: 0.7;
+                letter-spacing: 20px;
+                @include media(small) {
+                    font-size: 100px;
+
+                }
+                @include media (mopile){
+                    font-size: 60px;
+                }
+            }
+            
+            .p-about{
+
+                top: 70%;
+                left: 50%;
+                transform: translate(-50% ,-50%);
+                font-size: 65px;
+                color: $third-color;
+                @include media(small) {
+                    font-size: 45px;
+
+                }
+                @include media (mopile){
+                    top: 75%;
+                    left: 46%;
+                    font-size: 28px;
+
+                }
+                span{
+                    color: $mian-color;
+                }
+
+
+            }
+
+            .person{
+
+                @include media(mopile){
+
+                    padding: 0 !important;
+                }
+                .titl{
+
+                }
+                .ul-person
+                {
+                    @include media(mopile){
+                        justify-content: center;
+                    }
+                    ul:nth-child(1){
+                        margin-left: -25px;
+                    }
+                    ul:nth-child(2){
+                        margin-left: 30px;
+                    }
+                    ul{
+
+                        li{
+                            color: gray;
+                            @include media(mopile){
+                                font-size: 16px ;
+                            }
+                            @include media(small2){
+                                font-size: 12px;
+                            }
+    
+
+                            span{
+                                color: $third-color;
+                                font-weight: bold;
+                                @include media(small2){
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .more{
+
+                    &:hover{
+                       .a-more{
+                        color: white !important;
+                       }
+                        &::after{
+                            content: "";
+                            width: 89%;
+    
+                        }
+                    }
+    
+                    &::after{
+                        content: "";
+                        width: 0%;
+                        transition: $mian-transition;
+                        height: 191%;
+                        z-index: -1;
+                        right: 20px;
+                        top: -11px;
+                        border-radius: 20px;
+                        background: $mian-color;
+                        position: absolute;
+    
+                                    }
+    
+    
+                    svg{
+                        background-color: $mian-color;
+                        padding: 15px;
+                        position: absolute;
+                        top: -11px;
+                        color: white !important;
+                        border-radius: 0px 24px 24px 0;
+                        right: 0px;
+                    }
+
+                    .a-more{
+                        border: 2px solid $mian-color;
+                        color: $third-color;
+                        background-color: transparent;
+                        &:hover{
+                          color: white;
+                        }
+                      }
+            }
+        }
+            .per-box{
+                @include media(mopile){
+                    justify-content: center;
+                }
+                .box{
+                    
+                    border: 1px solid gray;
+                    width: 40%;
+                    padding: 0px 108px 0px 30px !important;
+                    @include media(mopile){
+                        padding: 0px 18px 0px 30px !important;
+
+
+                    }
+                    @include media(small3){
+                        padding: 0px 30px 0px 30px !important;
+
+
+                    }
+                    > span{
+                        font-size: 55px;
+                        color: $mian-color;
+                        @include media(mopile){
+                            font-size: 40px;
+                        }
+
+                        span{
+                            top: -12px;
+                            font-size: 51px;
+                            font-weight: normal;
+                            @include media (mopile){
+                                right: -22px;
+                                top: -5px;
+                                font-size: 30px;
+                            }
+                            
+
+                        }
+                        
+
+                    }
+                    p{
+                        color: gray;
+                        @include media(mopile){
+                            font-size: 12px;
+                        }
+
+
+                    }
+
+                
+                }
+            }
+
+            .m-card{
+
+                @include media(mopile){
+                    width: 44%;
+                }
+                background-color: white;
+                height: 130px;
+                border-radius: 50%;
+                width: 21%;
+                .num{
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h2{
+                        color: #666;
+                        font-weight:normal;
+                        font-size: 25px;
+
+                    }
+                }
+
+                svg{
+                    position: relative;
+                    width: 130px;
+                    height: 130px;
+                    transform: rotate(272deg);
+                
+
+                    circle{
+                        width: 100%;
+                        height: 100%;
+                        fill: none;
+                        stroke-width: 8px;
+                        stroke:#eee;
+                        transform: translate(5px ,5px);
+                    }
+                    .svg1{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 40px;
+    
+                    }
+                    .svg2{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 84px;
+    
+                    }
+                    .svg3{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 66px;
+    
+                    }
+                    .svg4{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 120px;
+    
+                    }
+                    .svg5{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 308px;
+    
+                    }
+                    .svg6{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 235px;
+    
+                    }
+                    .svg7{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 170px;
+    
+                    }
+                    .svg8{
+                        stroke: $mian-color;
+                        stroke-dasharray: 388px;
+                        stroke-dashoffset: 280px;
+    
+                    }
+                }
+
+
+
+            }
+            .info2{
+                font-size: 40px;
+                width: 100%;
+                @include media(small){
+                    font-size: 24px;
+                }
+                @include media(mopile){
+                    font-size: 19px;
+                }
+            }
+
+            .m1{
+                            
+                &::after {
+                    content: "html";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .m2{
+                            
+                &::after {
+                    content: "css";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size:17px;
+                    color: #666;
+                }
+            }
+            .m3{
+                            
+                &::after {
+                    content: "javascript";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .m4{
+                            
+                &::after {
+                    content: "php";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .m5{
+                            
+                &::after {
+                    content: "sass";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .m6{
+                            
+                &::after {
+                    content: "bootstrapt";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .m7{
+                            
+                &::after {
+                    content: "jquery";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .m8{
+                            
+                &::after {
+                    content: "ajax";
+                    position: absolute;
+                    bottom: -40px;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    color: #666;
+                }
+            }
+            .e-card{  
+                @include media(small){
+                    width: 70%;
+                }
+                @include media(medium){
+                    width: 40%;
+                }
+                @include media(large){
+                    width: 40%;
+                }
+                @include media(mopile){
+                width: 70%;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    top: 0;
+                    z-index: -1;
+                    left: -21px;
+                    height: 100px;
+                    background: gray;
+                }
+                .f-span{
+                    top: -28px;
+                    background: #eee;
+                    font-size: 13px;
+                    color: $third-color;
+                }
+                .s-span{
+                    
+                    top: -35px;
+                    left: -40px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: $mian-color;
+                    
+
+                    i{
+                        
+
+                    }
+
+                }
+                h2{
+                    color: $third-color;
+                    font-size: 18px;
+                    span{
+                        color: gray;
+
+                    }
+                }
+                p{
+
+                }
+            }
+
+        }
+
+    }
+        .info{
+            padding: 40px 0 0 ;
+            @include media(small) {
+
+
+            }
+            
+        }
+        .h-about{
+            font-size: 125px;
+            color: rgba(0, 0, 0, 0.1098039216);
+            line-height: 0.7;
+            font-weight: bold;
+            letter-spacing: 20px;
+            @include media(medium) {
+                font-size: 70px;
+
+            }
+            @include media(small) {
+
+                font-size: 70px !important;
+
+            }
+            @include media (mopile){
+                font-size: 60px ;
+            }
+            @include media (small2){
+                    font-size: 33px;
+
+            }
+        }
+        
+        .p-about{
+            @include media(medium) {
+                font-size: 35px;
+                top: 80%;
+                left: 50%;
+
+            }
+
+            top: 75%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+            font-size: 65px;
+            color: $third-color;
+            @include media(small) {
+                font-size: 35px;
+                left: 50%;
+
+            }
+            @include media (mopile){
+                top: 85%;
+                left: 50%;
+                font-size: 28px;
+
+            }
+            @include media (small2){
+                top: 91%;
+                left: 49%;
+                font-size: 16px;
+
+            }
+            span{
+                color: $mian-color;
+            }
+
+
+        }
+    .port{
+
+
+        .chos{
+            @include media (mopile){
+                margin: 0 !important;            
+                }
+            ul{
+                margin: auto;
+
+                .active{
+                    color: $mian-color;
+                }
+                li{
+                    cursor: pointer;
+                    @include media(small) {
+                        font-size: 14pxpx;
+                        
+        
+                    }
+                    @include media (mopile){
+                        top: 75%;
+                        left: 50%;
+                        font-size: 12px;
+        
+                    }
+                    @include media (small2){
+                        top: 91%;
+                        left: 49%;
+                        font-size: 10px;
+        
+                    }
+
+                }
+            }
+
+        }
+
+        .card-img{
+            position: relative;
+            @include media (mopile){
+            margin: 0 !important;            
+            }
+            .img-all{
+                position: relative;
+                
+                cursor: pointer;
+                width: 30%; 
+
+
+
+
+
+            }
+            .i1{
+                &::after{
+                    content: "SLIDER PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i2{
+                &::after{
+                    content: "YOUTUBE PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i3{
+                &::after{
+                    content: "MOCKUP PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i4{
+                &::after{
+                    content: "MOCKUP PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i5{
+                &::after{
+                    content: "SAAS PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i6{
+                &::after{
+                    content: "LOCAL PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i7{
+                &::after{
+                    content: "BEHENCE PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i8{
+                &::after{
+                    content: "DRIBBLE PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .i9{
+                &::after{
+                    content: "FACEBOOK PROJECT";
+                    transition: $mian-transition;
+                    width: 100%;
+                    height: 0%;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    color: white;
+                    border-radius: 4px;
+                    position: absolute;
+                    background-color: $mian-color;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center ;
+                    @include media (mopile){
+                        font-size: 10px;
+        
+                    }
+                    @include media (small2){
+                        font-size: 7px;
+        
+                    }
+                    
+                    
+                    
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .img-all1{   
+
+            }
+        }   
+        .card-i{
+            text-align: center;
+            @include media (mopile){
+               left: 8%;
+
+            }
+            @include media (medium){
+                left: 12%;
+
+            }
+            @include media (small){
+            left: 10%;
+
+            }
+            
+                    top: 10%;
+                    left: 25%;
+                    opacity: 0;
+                    z-index: 2222;
+                    &::before{
+                        content: "";
+                        width: 300%;
+                        height: 250%;
+                        z-index: -1;
+                        top: -100%;
+                        left: -100%;
+                        position: absolute;
+                        background-color: #0000008f;
+                    }
+                    
+                    .container{
+                        border-radius: 20px;
+                    .close{
+                        padding: 20px;
+                        border: 2px solid white;
+                        color: white;
+                        top: -35px;
+                        right: -60px;
+
+
+                    }
+                    .info-all{
+                        @include media (mopile){
+                            flex-direction: column;
+                            align-items: flex-start !important;
+                        }
+
+                    }
+                        h2{
+                            padding: 10px;
+                            color: $mian-color;
+                            text-align: center;
+                            @include media (mopile){
+                              font-size: 16px;            
+                            }
+
+                        }
+                        .info3{
+                            @include media (small2){
+                                width:100% !important;                
+                            }
+                            @include media (mopile){
+                                width:100% !important;                
+                            }
+
+                            padding: 10px 10px 0px 50px ;
+                            p{
+                                @include media (small2){
+                                    font-size: 10px;
+                                }
+                                @include media (mopile){
+                                    font-size: 12px;
+                                    
+                                }
+                                color: $third-color;
+                                span{
+                                    
+                                    color: #b6b6b6;
+                                }
+                            }
+
+
+                        }
+                        img{
+                            width: 700px;
+                            padding: 20px;
+                            border-radius: 44px;
+                            @include media (small){
+                                width: 500px;
+                
+                            }
+                            @include media (mopile){
+                                width: 300px;                
+                            }
+                            @include media (small2){
+                                width: 200px;                
+                            }
+                            
+
+
+                        
+                        
+
+                        }
+                    }
+                }
+
+    }
+
+    .contact{
+        .card-o-l{
+            @include media(mopile){
+                margin-left: 50px;
+            }
+        }
+        .card-o-r{
+            @include media(mopile){
+                    padding-bottom: 200px;
+            }
+        }
+        .container{
+            @include media(mopile){
+
+            }
+
+        }
+        .shy{
+            margin-left: -55px;
+            h2{
+                font-weight: bold;
+                color: $third-color;
+
+            }
+            p{
+                color: #00000050    ;
+                @include media(mopile){
+                    margin-left: 50px;
+                    font-size: 12px;
+                    margin:10px 0 ;
+                }
+
+            }
+        }
+        .for-me{
+            text-align: left;
+            
+            .card-me{
+                position: relative;
+
+                svg{
+                    top: 3px;
+                    font-size: 26px;
+                    left: -52px;
+                    color: $mian-color;
+                }
+                h2{
+                    font-weight: bold;
+                    color: $third-color;
+
+                }
+                p{
+                    color: #00000050    ;
+                    @include media(mopile){
+                        margin-left: 50px;
+                        font-size: 12px;
+                        margin:10px 0 ;
+                    }
+
+                }
+            }
+
+            }  
+        .con{
+                .social{
+                    svg{
+                        background-color: #eee;
+                        color: $third-color;
+                        font-size: 20px;
+                        border-radius: 50%;
+                        padding: 10px;
+                        &:hover{
+                            color: white;
+                            background-color: $mian-color;
+                        }
+                    
+                        
+
+                    }
+                    
+                }
+
+
+    }  
+          form{
+
+            div{
+                @include media (mopile){
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+            }
+            input{
+                border-radius: 40px;
+                border: 2px solid #eee;
+                margin-bottom: 14px; 
+                &:focus-visible{
+                    outline: none !important;
+                    border: 2px solid $mian-color;
+                }
+                @include media (small2){
+                    width: 100%;
+                }
+                @include media (mopile){
+                    width: 100%;
+                }
+                
+
+            }
+            input:nth-child(1){
+                
+
+            }
+            input:nth-child(2){
+
+            }
+            input:nth-child(3){
+
+            }
+            textarea{
+                border-radius: 40px;
+                border: 2px solid #eee;
+                &:focus-visible{
+                    outline: none !important;
+                    border: 2px solid $mian-color;
+                }
+
+
+
+            }
+        }
+
+        .more{
+
+            &:hover{
+               .a-more{
+                color: white !important;
+               }
+                &::after{
+                    content: "";
+                    width: 89%;
+
+                }
+            }
+
+            &::after{
+                content: "";
+                width: 0%;
+                transition: $mian-transition;
+                height: 191%;
+                z-index: -1;
+                right: 20px;
+                top: -11px;
+                border-radius: 20px;
+                background: $mian-color;
+                position: absolute;
+
+                            }
+
+
+            svg{
+                background-color: $mian-color;
+                padding: 15px;
+                position: absolute;
+                top: -11px;
+                color: white !important;
+                border-radius: 0px 24px 24px 0;
+                right: 0px;
+            }
+
+            .a-more{
+                border: 2px solid $mian-color;
+                color: $third-color;
+                background-color: transparent;
+                &:hover{
+                  color: white;
+                }
+              }
+    }
+
+        }  
+
+    .blog{
+
+
+        .card-blog{
+            width: 350px;
+            background-color: #eee;
+            border-radius: 20px;
+            cursor: pointer;
+            div{
+                width: 100%; 
+                border-bottom: 4px solid $mian-color; 
+                border-top-right-radius:10px;
+                border-top-left-radius:10px;
+                overflow: hidden;
+                img{
+                    transition: 0.5s;
+                width: 100%;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+
+
+            }
+            }
+
+            p{
+                font-size: 15px;
+
+            }
+            h4{
+                font-size: 20px;
+                color: $third-color;
+                font-weight: bold;
+                transition: $mian-transition - 0.5s;
+                &:hover{
+                    color: $mian-color;
+                }
+            }
+        }
+        .bgg{
+            width: 100%;
+    height: 100%;
+    background: #2125298f;
+    position: fixed;
+        }
+        .con2{
+            @include media(small2){
+                padding-bottom: 100px;
+            }
+
+        }
+        .card-bb{ 
+            opacity: 0;
+            position: fixed;
+            left: 25%;
+            top: 10%;
+            height: 600px;
+            overflow-y: auto;
+            @include media(small){
+                position: fixed;
+                left: 16%;
+                top: 20%;
+                height: 500px;
+                overflow-y: auto;
+                z-index: 2222;
+                width: 530px;
+                border-radius: 20px;
+            }
+            @include media(mopile){
+                position: fixed;
+                left: 25%;
+                top: 10%;
+                height: 450px;
+                overflow-y: auto;
+                z-index: 2222;
+                width: 370px;
+                border-radius: 20px;
+            }
+            @include media(small2){
+                left: 1%;
+            }
+
+
+            z-index: 2222;
+            width: 650px;
+            border-radius: 20px;
+
+            .container{
+
+    
+                .info-all{
+                    justify-content: center !important;
+                }
+                position: relative;
+
+                .close2{
+                    top: 15px;
+                    right: 15px;
+                    padding: 10px;
+                    border: 2px solid white;
+                    color: $third-color;
+                    cursor: pointer;
+                
+                }
+                background-color: #eee !important;
+            }
+                .h-about{
+                    font-size: 70px;
+                    @include media(small){
+                        font-size: 50px !important;
+    
+                    }
+                    @include media(mopile){
+                        font-size: 30px !important;
+    
+                    }
+
+                }
+                .p-about{
+                    font-size: 30px;
+                    @include media(mopile){
+                        font-size: 16px;
+
+                    }
+
+                }
+            
+
+            img{
+                width: 100%;
+                height: 350px;
+
+            }
+            .h-blog{
+                color: $third-color;
+                @include media(small){
+                    font-size: 20px;
+
+                }   
+                @include media(mopile){
+                    font-size: 16px;
+
+                }   
+            }
+            .text-p{
+                padding: 20px;
+                p{
+                    color: #00000050;
+                }
+            }
+            .info3{
+                svg{
+                    color: $mian-color;
+                    padding-right: 10px;
+                }
+                p{
+                    @include media(small){
+                        font-size: 12px;
+
+                    }
+                    @include media(mopile){
+                        font-size: 9px;
+
+                    }
+                    @include media(small2){
+                        font-size: 8px;
+
+                    }
+
+                }
+            }
+
+        }
+    }
+::-webkit-scrollbar{
+                width: 10px;          
+            }
+            /* Track */
+::-webkit-scrollbar-track {
+    background: #eee; 
+    border-radius: 20px;
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $third-color;
+    border-radius: 20px;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $mian-color;
+}
+
